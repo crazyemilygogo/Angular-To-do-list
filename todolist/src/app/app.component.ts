@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-
 import { TodoItem } from './shared/todo-item';
-
-
 
 @Component({
   selector: 'app-root',
@@ -44,17 +41,18 @@ export class AppComponent {
     }
   ];
 
+  
   addTodoItem(text) {
     this.todoItems.push({
-      id: (new Date()).getTime(),
+      id: ((this.todoItems.length)+1),
       value: text,
       done: false,
       isDelete: false
-    });
+    }); 
   }
-
+ 
+  
   deleteTodoItem(item) {
-    console.log('delete', item);
     this.todoItems.splice(this.todoItems.indexOf(item), 1);
   }
 
