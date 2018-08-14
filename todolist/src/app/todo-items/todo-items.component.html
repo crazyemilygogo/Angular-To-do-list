@@ -1,25 +1,4 @@
 
-<!--<ul id="myUL">
-  <li>Hit the gym</li>
-  <li class="checked">Pay bills</li>
-  <li>Meet George
-  	<span class="close">X</span></li>
-  <li>Buy eggs</li>
-  <li>Read a book</li>
-  <li>Organize office</li>
-</ul>-->
-
-
-<!--<ul>
-  <li *ngFor="let item of items">
-    <label htmlFor="chk_{{item.id}}">     
-    	<span *ngIf="item.done">v</span>
-       <input id="chk_{{item.id}}" type="checkbox" [checked]="item.done" (click)="itemClick(item)"> {{ item.value }} 
-    </label> |
-    <a href="#" (click)="delete(item)">delete</a>
-  </li>
-</ul>
--->
 <ul>
   <li *ngFor="let item of items" id="chk_{{item.id}}"  [ngClass]="{'checked': item.done}" [ngStyle]="setMyStyles(item)" (click)="itemClick(item)" >
     
